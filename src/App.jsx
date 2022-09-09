@@ -8,6 +8,7 @@ import Error from "./pages/Error";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./pages/GolobalStyle";
 const App = () => {
   const theme = {
     colors: {
@@ -31,6 +32,7 @@ const App = () => {
   };
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyle />
       <BrowserRouter>
         <Header />
         <Routes>

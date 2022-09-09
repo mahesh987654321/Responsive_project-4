@@ -10,13 +10,21 @@ const Navbar = () => {
 
       li {
         list-style: none;
+
         .navbar-link {
-          display: inline-block;
-          text-decoration: none;
-          font-size: 1.8rem;
-          text-transform: uppercase;
-          color: ${({ theme }) => theme.colors.black};
-          transition: color 0.3s linear;
+          &:link,
+          &:visited {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            color: ${({ theme }) => theme.colors.black};
+            transition: color 0.3s linear;
+          }
+          &:hover,
+          &:active {
+            color: ${({ theme }) => theme.colors.helper};
+          }
         }
       }
     }
